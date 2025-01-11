@@ -1,0 +1,15 @@
+<%= form_with model: [@list, @bookmark], local: true do |form| %>
+  <div class="form-group">
+    <%= form.label :movie_id, 'Select a movie' %>
+    <%= form.collection_select :movie_id, Movie.all, :id, :title, prompt: 'Choose a movie' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :comment, 'Add a comment' %>
+    <%= form.text_field :comment, placeholder: 'Write a comment...', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit 'Add Bookmark', class: 'btn btn-primary' %>
+  </div>
+<% end %>

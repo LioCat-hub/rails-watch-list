@@ -10,3 +10,149 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #2c3e50; /* Dark background for body */
+  color: white; /* White text color for dark mode */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+  color: #ecf0f1; /* Lighter text for headings */
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #3498db; /* Blue links */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+/* Buttons */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Cards */
+.card {
+  background-color: #34495e; /* Dark card background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Forms */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #34495e; /* Dark background for form fields */
+  color: white;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2c3e50; /* Dark navbar */
+  padding: 10px 20px;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 20px;
+}
+
+.navbar a:hover {
+  color: #3498db;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50; /* Dark footer */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Light Mode (Optional) */
+body.light-mode {
+  background-color: #f4f7fc; /* Light background for body */
+  color: #333; /* Dark text color for light mode */
+}
+
+body.light-mode a {
+  color: #3498db; /* Blue links */
+}
+
+body.light-mode button {
+  background-color: #3498db;
+}
+
+body.light-mode .card {
+  background-color: white; /* Light card background */
+  color: #333; /* Dark text for light mode */
+}
+
+body.light-mode footer {
+  background-color: #ecf0f1; /* Light footer */
+}
